@@ -5,16 +5,16 @@ pastebin_api_url = 'https://pastebin.com/api/api_post.php'
 
 
 def main():
-    url = post_new_paste('this is the title', 'this is the body', '1H', True)
+    url = post_new_paste('this is the title', 'this is the body', '1M', True)
     print(f'New paste URL {url}')
 
-def post_new_paste(title, body_text, expiration='30d', listed=False):
+def post_new_paste(title, body_text, expiration='1M', listed=False):
     """Post new public paste to Pastebin
 
     Args:
         title (str): Paste title
         body_text (str): Paste body text
-        expiration (str, optional): Paste expire date(N = never, 10M = minutes, 1H, 1D, 1W, 1Y) Defaults to '30 days'.
+        expiration (str, optional): Paste expire date(N = never, 10M = minutes, 1H, 1D, 1W, 1Y) Defaults to '1 month'.
         listed (bool, optional): Is Paste public (True) or not (False) Defaults to False.
 
     Returns:
