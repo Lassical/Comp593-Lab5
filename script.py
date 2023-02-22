@@ -9,6 +9,7 @@ def main():
         title, body_text =get_paste_data(poke_list, search_term)
         paste_url = post_new_paste(title, body_text, '1M')
         print(f'URL of new paste: {paste_url}')
+        print(body_text)
 
     return
 
@@ -22,9 +23,8 @@ def get_search_term():
 
 def get_paste_data(poke_list, search_term):
     title = f'"{search_term}\'s" abilities'
-    divider = ', '.join(poke_list)
-    r = divider.rfind(", ")
-    body_text =  divider[:r] + ' and' + divider [r+1:]
+    divider = '\n-'.join(poke_list)
+    body_text =  '-' + divider
 
     return title, body_text
 

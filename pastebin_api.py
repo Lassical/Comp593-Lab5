@@ -7,6 +7,7 @@ pastebin_api_url = 'https://pastebin.com/api/api_post.php'
 def main():
     url = post_new_paste('this is the title', 'this is the body', '1M', True)
     print(f'New paste URL {url}')
+    print(url)
 
 def post_new_paste(title, body_text, expiration='1M', listed=False):
     """Post new public paste to Pastebin
