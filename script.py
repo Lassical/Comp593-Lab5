@@ -9,7 +9,6 @@ def main():
         title, body_text =get_paste_data(poke_list, search_term)
         paste_url = post_new_paste(title, body_text, '1M')
         print(f'URL of new paste: {paste_url}')
-        print(body_text)
 
     return
 
